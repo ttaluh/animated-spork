@@ -5,3 +5,5 @@ resources:
 - local-storage-ns.yaml
 - local-storage-og.yaml
 - local-storage-sub.yaml  
+- local-storage-discovery.yaml
+- local-storage-volset.yaml
