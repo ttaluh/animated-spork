@@ -6,6 +6,6 @@ metadata:
 spec:
   channel: stable-4.9
   installPlanApproval: Automatic
-  name: ocs-operator
+  name: odf-operator
   source: redhat-operator-index
   sourceNamespace: openshift-marketplace
