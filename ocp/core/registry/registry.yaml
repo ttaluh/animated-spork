@@ -6,7 +6,6 @@ spec:
   defaultRoute: true
   logLevel: Normal
   managementState: Managed
-  observedConfig: null
   operatorLogLevel: Normal
   replicas: 1
   requests:
@@ -15,15 +14,14 @@ spec:
     write:
       maxWaitInQueue: 0s
   rolloutStrategy: RollingUpdate
-  unsupportedConfigOverrides: null
   nodeSelector:
     node-role.kubernetes.io/infra: ""
   tolerations: 
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/infra
-        operator: Exists
-      - effect: NoExecute
-        key: node-role.kubernetes.io/infra
-        operator: Exists
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/infra
+    operator: Exists
+  - effect: NoExecute
+    key: node-role.kubernetes.io/infra
+    operator: Exists
   storage:
     emptyDir: {}
