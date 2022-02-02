@@ -5,4 +5,3 @@ resources:
 - odf-ns.yaml
 - odf-og.yaml
 - odf-sub.yaml  
-- ocs-storagecluster.yaml
