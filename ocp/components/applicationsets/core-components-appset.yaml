@@ -15,16 +15,16 @@ spec:
       name: '{{path.basename}}'
     spec:
       project: default
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-        retry:
-          limit: 15
-          backoff:
-            duration: 15s
-            factor: 2
-            maxDuration: 5m
+#      syncPolicy:
+#        automated:
+#          prune: true
+#          selfHeal: true
+#        retry:
+#          limit: 15
+#          backoff:
+#            duration: 15s
+#            factor: 2
+#            maxDuration: 5m
       source:
         repoURL: https://github.com/ttaluh/animated-spork
         targetRevision: main
