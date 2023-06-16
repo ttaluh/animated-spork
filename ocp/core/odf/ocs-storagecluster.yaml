@@ -9,8 +9,8 @@ metadata:
   namespace: openshift-storage
 spec:
   encryption:
+    clusterWide: true
     enable: true
-  flexibleScaling: true
   monDataDirHostPath: /var/lib/rook
   resources:
     mds:
@@ -28,7 +28,7 @@ spec:
         cpu: "1"
         memory: 4Gi
   storageDeviceSets:
-  - count: 3
+  - count: 1
     dataPVCTemplate:
       spec:
         accessModes:
@@ -36,10 +36,10 @@ spec:
         resources:
           requests:
             storage: "1"
-        storageClassName: storage-localblock-sc
+        storageClassName: localblock
         volumeMode: Block
-    name: ocs-deviceset-storage-localblock-sc
-    replica: 1
+    name: ocs-deviceset-localblock
+    replica: 3
     resources:
       limits:
         cpu: "2"
@@ -47,4 +47,3 @@ spec:
       requests:
         cpu: "1"
         memory: 5Gi
-  version: 4.9.0
