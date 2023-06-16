@@ -6,8 +6,14 @@ metadata:
 spec:
   nodeSelector:
     nodeSelectorTerms:
-      - matchExpressions:
-        - key: cluster.ocs.openshift.io/openshift-storage
-          operator: In
-          values:
-            - ""
+    - matchExpressions:
+      - key: kubernetes.io/hostname
+        operator: In
+        values:
+        - ip-172-16-1-249
+        - ip-172-31-37-58
+        - ip-192-168-1-67
+  tolerations:
+  - effect: NoSchedule
+    key: node.ocs.openshift.io/storage
+    value: "true"
