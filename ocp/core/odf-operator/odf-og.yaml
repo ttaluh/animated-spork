@@ -1,8 +1,9 @@
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: openshift-storage
+  name: openshift-storage-dlwtq
   namespace: openshift-storage
 spec:
   targetNamespaces:
     - openshift-storage
+    upgradeStrategy: Default
